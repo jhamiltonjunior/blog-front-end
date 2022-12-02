@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import NextImage from "../../components/image"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
+import rehypeRaw from "rehype-raw"
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.image)
@@ -51,7 +52,9 @@ const Article = ({ article, categories }) => {
                   {article.attributes.published_at}
                 </Moment>
               </p>
-              <ReactMarkdown escapeHtml={true}>{article.attributes.content}</ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {article.attributes.content}
+              </ReactMarkdown>
             </div>
           </div>
         </div>
