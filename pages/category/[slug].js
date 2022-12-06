@@ -12,8 +12,8 @@ const Category = ({ category, categories }) => {
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div className="container mx-auto px-10 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <h1>{category.attributes.name}</h1>
           <Articles articles={category.attributes.articles.data} />
         </div>
