@@ -21,6 +21,7 @@
     "react-dom": "^18.0.0",
     "react-markdown": "^8.0.4",
     "react-moment": "^0.9.6",
+    "react-multi-carousel": "^2.8.2",
     "rehype-raw": "^6.1.1"
   },
   "license": "MIT",

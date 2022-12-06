@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Header = ({ categories }) => {
   return (
-    <div>
+    <header className="container mx-auto px-10 mb-8">
       <nav className="uk-navbar-container" data-uk-navbar>
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
@@ -28,7 +28,7 @@ const Header = ({ categories }) => {
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
   )
 }
 

@@ -1,4 +1,5 @@
 import React from "react"
+// import { FeaturedPosts } from "../sections/index"
 import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Categories from "../components/categories"
@@ -7,13 +8,16 @@ import { fetchAPI } from "../lib/api"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
-    <Layout categories={categories}>
+    <Layout categories={categories} className="container mx-auto px-10 mb-8">
       {/* <Categories categories={categories} /> */}
       <Seo seo={homepage.attributes.seo} />
-      <div className="uk-section">
-        <div className="container mx-auto px-10 mb-8 uk-container uk-container-large">
+
+      <div className="lg:col-span-4 col-span-1">
+        <div className="lg:sticky relative top-8">
           <h1>{homepage.attributes.hero.title}</h1>
+          {console.log(homepage.attributes.hero.title)}
           <Articles articles={articles} />
+          <Categories categories={categories} />
         </div>
       </div>
     </Layout>
