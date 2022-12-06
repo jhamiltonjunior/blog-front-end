@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 
-const Nav = ({ categories }) => {
+const Header = ({ categories }) => {
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
@@ -32,4 +32,4 @@ const Nav = ({ categories }) => {
   )
 }
 
-export default Nav
+export default Header

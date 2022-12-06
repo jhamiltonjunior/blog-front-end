@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Link from "next/link"
 
-import { getCategories } from "../services"
-
-const Categories = () => {
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    getCategories().then((newCategories) => {
-      setCategories(newCategories)
-    })
-  }, [])
-
+const Nav = ({ categories }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
-      {categories.map((category, index) => (
-        // eslint-disable-next-line @next/next/link-passhref
-        <Link key={index} href={`/category/${category.slug}`}>
-          <span
-            className={`cursor-pointer block ${
-              index === categories.length - 1 ? "border-b-0" : "border-b"
-            } pb-3 mb-3`}
-          >
-            {category.name}
-          </span>
-        </Link>
-      ))}
+    <div>
+      <nav className="uk-navbar-container" data-uk-navbar>
+        <div className="uk-navbar-left">
+          <ul className="uk-navbar-nav">
+            <li>
+              <Link href="/">
+                <a>Hamilton Dev</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="uk-navbar-right">
+          <ul className="uk-navbar-nav">
+            {categories.map((category) => {
+              return (
+                <li key={category.id}>
+                  <Link href={`/category/${category.attributes.slug}`}>
+                    <a className="uk-link-reset">{category.attributes.name}</a>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </nav>
     </div>
   )
 }
 
-export default Categories
+export default Nav
