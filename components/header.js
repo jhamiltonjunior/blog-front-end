@@ -4,23 +4,27 @@ import Link from "next/link"
 const Header = ({ categories }) => {
   return (
     <header className="container mx-auto px-10 mb-8">
-      <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-left">
-          <ul className="uk-navbar-nav">
+      <nav className="border-b w-full inline-block border-blue-400 py-8">
+        <div className="md:float-left block">
+          <ul className="">
             <li>
               <Link href="/">
-                <a>Hamilton Dev</a>
+                <a className="cursor-pointer font-bold text-4xl text-white">
+                  Hamilton Dev
+                </a>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="uk-navbar-right">
-          <ul className="uk-navbar-nav">
+        <div className="hidden md:float-left md:contents">
+          <ul>
             {categories.map((category) => {
               return (
                 <li key={category.id}>
                   <Link href={`/category/${category.attributes.slug}`}>
-                    <a className="uk-link-reset">{category.attributes.name}</a>
+                    <a className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">
+                      {category.attributes.name}
+                    </a>
                   </Link>
                 </li>
               )
