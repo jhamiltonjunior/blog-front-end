@@ -20,7 +20,7 @@ const Articles = ({ articles }) => {
           })}
         </div>
         <div>
-          <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+          <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
             {rightArticles.map((article, i) => {
               return (
                 <Card
