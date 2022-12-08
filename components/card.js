@@ -1,13 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Moment from "react-moment"
-// import NextImage from "next/image"
 import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative text-center pb-80 mb-6">
+      <div className="relative text-center mb-6">
         <NextImage image={article.attributes.image} />
       </div>
 
