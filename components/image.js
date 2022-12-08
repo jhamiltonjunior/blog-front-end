@@ -11,7 +11,8 @@ const Image = ({ image, style }) => {
   return (
     <NextImage
       // loader={loader}
-      layout="responsive"
+      className="object-top absolute h-80 w-full object-cover rounded-t-lg lg:rounded-lg"
+      // layout="intrinsic"
       width={width || "100%"}
       height={height || "100%"}
       objectFit="contain"
