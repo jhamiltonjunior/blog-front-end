@@ -32,14 +32,8 @@ const Article = ({ article, categories }) => {
         >
           <h1>{article.attributes.title}</h1>
         </div>
-
         <div className="uk-section">
           <div className="uk-container uk-container-small">
-            <ReactMarkdown
-              source={article.attributes.content}
-              escapeHtml={false}
-            />
-            <hr className="uk-divider-small" />
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
                 {article.attributes.author.picture && (

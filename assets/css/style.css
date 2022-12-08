@@ -644,6 +644,10 @@ video {
   height: 1.5rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -686,6 +690,11 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .border-b {
@@ -736,6 +745,16 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-4 {
@@ -1013,6 +1032,10 @@ img:hover {
 
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:rounded-lg {
+    border-radius: 0.5rem;
   }
 
   .lg\:p-8 {
