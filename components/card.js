@@ -1,12 +1,13 @@
 import React from "react"
 import Link from "next/link"
 import Moment from "react-moment"
+import Image from "next/image"
 import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+      <div className="relative overflow-hidden text-center mb-6">
         <NextImage
           image={article.attributes.image}
           className="object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
