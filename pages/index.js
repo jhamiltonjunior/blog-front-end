@@ -13,11 +13,16 @@ const Home = ({ articles, categories, homepage }) => {
       <Seo seo={homepage.attributes.seo} />
 
       <div className="container mx-auto px-10 mb-8">
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
+        <div className="">
+          <div className="lg:col-span-8 col-span-1">
             {/* <h1>{homepage.attributes.hero.title}</h1> */}
             <Articles articles={articles} />
-            <Categories categories={categories} />
+          </div>
+
+          <div className="lg:col-span-4 col-span-1">
+            <div className="lg:sticky relative top-8">
+              <Categories categories={categories} />
+            </div>
           </div>
         </div>
       </div>

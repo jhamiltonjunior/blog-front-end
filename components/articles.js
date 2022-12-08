@@ -8,7 +8,7 @@ const Articles = ({ articles }) => {
 
   return (
     <div>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="">
         <div>
           {leftArticles.map((article, i) => {
             return (
@@ -20,7 +20,7 @@ const Articles = ({ articles }) => {
           })}
         </div>
         <div>
-          <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+          <div className="">
             {rightArticles.map((article, i) => {
               return (
                 <Card

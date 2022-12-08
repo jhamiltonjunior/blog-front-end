@@ -4,20 +4,17 @@ import Link from "next/link"
 const Categories = ({ categories }) => {
   return (
     <div>
-      <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-right">
-          <ul className="uk-navbar-nav">
-            {categories.map((category) => {
-              return (
-                <li key={category.id}>
-                  <Link href={`/category/${category.attributes.slug}`}>
-                    <a className="uk-link-reset">{category.attributes.name}</a>
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+      <nav className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
+        <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
+        {categories.map((category, index) => {
+          return (
+            <Link key={index} href={`/category/${category.attributes.slug}`}>
+              <a className="cursor-pointer block border-b pb-3 mb-3">
+                {category.attributes.name}
+              </a>
+            </Link>
+          )
+        })}
       </nav>
     </div>
   )
