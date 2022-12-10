@@ -11,10 +11,10 @@ const Home = ({ articles, categories, homepage }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.attributes.seo} />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10 mb-8">
         <div className="">
           {/* className="grid grid-cols-1 lg:grid-cols-12 gap-12" */}
-          <div className="flex m-4 lg:flex lg:flex-wrap p-4 md:w-1/3">
+          <div className="lg:col-span-8 col-span-1">
             {/* <h1>{homepage.attributes.hero.title}</h1> */}
             <Articles articles={articles} />
           </div>

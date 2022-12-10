@@ -6,7 +6,7 @@ import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
-    <div className="bg-dark shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden text-center mb-6">
         <NextImage
           image={article.attributes.image}
