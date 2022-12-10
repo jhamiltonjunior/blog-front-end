@@ -41,6 +41,10 @@ const Seo = ({ seo }) => {
         </>
       )}
       {fullSeo.article && <meta property="og:type" content="article" />}
+      <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   )

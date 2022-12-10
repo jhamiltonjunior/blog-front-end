@@ -8,7 +8,7 @@ const Articles = ({ articles }) => {
 
   return (
     <div>
-      <div className="">
+      <div>
         <div>
           {leftArticles.map((article, i) => {
             return (
