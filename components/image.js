@@ -13,10 +13,10 @@ const Image = ({ image, style }) => {
       // loader={loader}
       // layout=""
       sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+              (max-width: 1200px) 100vw,
               33vw"
       width={786}
-      height={300}
+      height={400}
       objectFit="cover"
       src={getStrapiMedia(image)}
       alt={alternativeText || ""}

@@ -6,12 +6,9 @@ import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
-    <div className="w-auto bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-3">
-      <div className="relative overflow-hidden text-center mb-6">
-        <NextImage
-          image={article.attributes.image}
-          className="object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
-        />
+    <div className="w-auto bg-white shadow-lg rounded-lg p-0 pb-12 mb-3">
+      <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
+        <NextImage image={article.attributes.image} />
       </div>
 
       <Link href={`/article/${article.attributes.slug}`} passHref>
