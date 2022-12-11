@@ -1,8 +1,6 @@
-/* #1B222A
-#12BEFC
-#FFFFF3 */
-
-/* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -956,6 +954,12 @@ html:before, body:before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.white-mode {
+  /* color: #1B222A; */
+  color: #12BEFC;
+  /* color: #FFFFF3; */
 }
 
 h2 {
