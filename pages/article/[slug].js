@@ -30,23 +30,17 @@ const Article = ({ article, categories }) => {
           <h1>{article.attributes.title}</h1>
         </div>
 
-        <div>
-          {article.attributes.author.picture && (
-            <NextImage image={article.attributes.author.picture} />
-          )}
-        </div>
-        <div className="uk-width-expand">
-          <p className="uk-margin-remove-bottom">
-            {console.log(article.attributes.author.data)}
+        <div className="my-10">
+          <p className="uk-margin-remove-bottom text-slate">
             By {article.attributes.author.data.attributes.name}
           </p>
-          <p className="uk-text-meta uk-margin-remove-top">
+          <p className="text-slate-100">
             <Moment format="MMM Do YYYY">
               {article.attributes.published_at}
             </Moment>
           </p>
         </div>
-        <div className="text-center  mb-8 text-3xl">
+        <div className="text-center mb-8 text-3xl">
           <NextImage image={article.attributes.image} />
         </div>
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
