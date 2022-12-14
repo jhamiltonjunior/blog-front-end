@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Header = ({ categories }) => {
   return (
-    <header className="bg-white dark:bg-gray-800 border-gray-200 lg:px-6 mx-auto py-2 px-10 mb-8">
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-800 border-gray-200 lg:px-6 mx-auto py-2 px-10 mb-8 w-full trasition ease-in-out duration-500">
       <nav className="2xl:container flex flex-wrap justify-between items-center mx-auto">
         <div className="block">
           <ul>
