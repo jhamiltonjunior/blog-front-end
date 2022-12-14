@@ -6,7 +6,7 @@ import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
-    <div className="w-auto bg-white shadow-lg rounded-lg p-0 pb-12 mb-3">
+    <div className="w-auto bg-white shadow-lg rounded-lg p-0 pb-12">
       <Link href={`/article/${article.attributes.slug}`}>
         <a>
           <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
