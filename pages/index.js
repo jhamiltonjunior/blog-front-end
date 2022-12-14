@@ -17,7 +17,7 @@ const Home = ({ articles, categories, homepage }) => {
 
       <div className="lg:col-span-4 col-span-2">
         <div className="lg:sticky relative top-8">
-          <Categories categories={categories} />
+          {/* <categories categories={categories} /> */}
         </div>
       </div>
     </Layout>
