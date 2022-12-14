@@ -7,9 +7,13 @@ import NextImage from "./image"
 const Card = ({ article }) => {
   return (
     <Link href={`/article/${article.attributes.slug}`}>
-      <a className="w-auto bg-white shadow-lg rounded-lg p-0 pb-12 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
+      <a className="w-auto bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
         <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
           <NextImage image={article.attributes.image} />
+        </div>
+
+        <div className="px-10">
+          <p className="">{article.attributes.category.data.attributes.name}</p>
         </div>
 
         <h2 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-blue-400 text-3xl font-semibold">
@@ -18,7 +22,7 @@ const Card = ({ article }) => {
 
         {/* {console.log(article.attributes.title)} */}
 
-        <div className="text-center font-medium text-gray-700">
+        <div className="text-center font-medium text-gray-700 mb-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 inline mr-2 text-blue-400"
@@ -40,23 +44,14 @@ const Card = ({ article }) => {
           </span>
         </div>
 
-        <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8 md:truncate">
-          {/* {article.attributes.description} */}
-        </p>
+        {/* <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8 md:truncate">
+          {article.attributes.description}
+        </p> */}
         {/* <div className="text-center">
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-gray-800 hover:bg-blue-500 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading
           </span>
         </div> */}
-
-        <div className="">
-          <p id="category" className="">
-            {/* {article.attributes.category.data.attributes.name} */}
-          </p>
-          {/* <p id="title" className="uk-text-large">
-              {article.attributes.title}
-            </p> */}
-        </div>
       </a>
     </Link>
   )
