@@ -8,10 +8,10 @@ const Header = ({ categories }) => {
         <div className="block">
           <ul>
             <li>
-              <Link href="/">
-                <a className="cursor-pointer font-bold text-4xl .white-mode">
+              <Link href="/" passHref>
+                <div className="cursor-pointer font-bold text-4xl .white-mode">
                   Hamilton Dev
-                </a>
+                </div>
               </Link>
             </li>
           </ul>
