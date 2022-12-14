@@ -11,21 +11,20 @@ const Card = ({ article }) => {
         <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
           <NextImage image={article.attributes.image} />
         </div>
-
-        <div className="px-10">
+        <div className="px-6 mb-2 text-xs">
           <p className="">{article.attributes.category.data.attributes.name}</p>
         </div>
 
-        <h2 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-blue-400 text-3xl font-semibold">
+        <h2 className="px-6 transition duration-700 mb-8 cursor-pointer hover:text-blue-400 text-2xl font-normal">
           {article.attributes.title}
         </h2>
 
         {/* {console.log(article.attributes.title)} */}
 
-        <div className="text-center font-medium text-gray-700 mb-8">
-          <svg
+        <div className="px-6 text-xs text-gray-700 mb-3.5">
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 inline mr-2 text-blue-400"
+            className="h-6 w-6 inline text-xs mr-2 text-blue-400"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -36,7 +35,7 @@ const Card = ({ article }) => {
               strokeWidth="2"
               d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
             />
-          </svg>
+          </svg> */}
           <span className="align-middle">
             <Moment format="MMM DD YYYY">
               {article.attributes.published_at}
