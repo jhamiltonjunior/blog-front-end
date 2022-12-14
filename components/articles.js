@@ -7,7 +7,7 @@ const Articles = ({ articles }) => {
   const rightArticles = articles.slice(leftArticlesCount, articles.length)
 
   return (
-    <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+    <div className="grid gap-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
       {leftArticles.map((article, i) => {
         return (
           <Card
