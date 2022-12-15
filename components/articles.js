@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "./card"
+import Pagination from "./pagination"
 
 const Articles = ({ articles }) => {
   const leftArticlesCount = Math.ceil(articles.length / 5)
@@ -26,6 +27,7 @@ const Articles = ({ articles }) => {
           )
         })}
       </div>
+      <Pagination />
     </div>
   )
 }
