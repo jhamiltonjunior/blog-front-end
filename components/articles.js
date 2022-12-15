@@ -7,23 +7,25 @@ const Articles = ({ articles }) => {
   const rightArticles = articles.slice(leftArticlesCount, articles.length)
 
   return (
-    <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-      {leftArticles.map((article, i) => {
-        return (
-          <Card
-            article={article}
-            key={`article__left__${article.attributes.slug}`}
-          />
-        )
-      })}
-      {rightArticles.map((article, i) => {
-        return (
-          <Card
-            article={article}
-            key={`article__left__${article.attributes.slug}`}
-          />
-        )
-      })}
+    <div>
+      <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        {leftArticles.map((article, i) => {
+          return (
+            <Card
+              article={article}
+              key={`article__left__${article.attributes.slug}`}
+            />
+          )
+        })}
+        {rightArticles.map((article, i) => {
+          return (
+            <Card
+              article={article}
+              key={`article__left__${article.attributes.slug}`}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }
