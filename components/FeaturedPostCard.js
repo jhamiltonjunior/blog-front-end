@@ -1,6 +1,6 @@
 import React from "react"
 import moment from "moment"
-import Image from "next/legacy/image";
+import Image from "next/legacy/image"
 import Link from "next/link"
 
 const FeaturedPostCard = ({ post }) => (
