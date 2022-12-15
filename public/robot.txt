@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: http://localhost:3000/api/my-sitemap
-Sitemap: https://blog.hamiltonjr.dev/
+Sitemap: https://blog.hamiltonjr.dev/api/my-sitemap
