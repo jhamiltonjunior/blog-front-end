@@ -2,7 +2,7 @@ import { getStrapiMedia } from "../lib/media"
 import NextImage from "next/image"
 
 const Image = ({ image, style }) => {
-  // const { alternativeText } = image.data.attributes
+  const { url, alternativeText, width, height } = image.data.attributes
 
   // const loader = () => {
   //   return getStrapiMedia(image)
@@ -19,7 +19,7 @@ const Image = ({ image, style }) => {
       height={400}
       objectFit="cover"
       src={getStrapiMedia(image)}
-      alt=""
+      alt={alternativeText || ""}
     />
   )
 }
