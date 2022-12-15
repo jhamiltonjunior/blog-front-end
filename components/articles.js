@@ -6,14 +6,8 @@ const Articles = ({ articles }) => {
   return (
     <div>
       <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-        {console.log(articles)}
         {articles.map((article, i) => {
-          return (
-            <Card
-              article={article}
-              key={`article__left__${article.attributes.slug}`}
-            />
-          )
+          return <Card article={article} key={article.attributes.slug} />
         })}
       </div>
       <Pagination />
