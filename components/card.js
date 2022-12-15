@@ -6,8 +6,8 @@ import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
-    <Link href={`/article/${article.attributes.slug}`} passHref>
-      <div className="w-auto bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
+    <Link href={`/article/${article.attributes.slug}`} legacyBehavior>
+      <a className="w-auto bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
         <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
           <NextImage image={article.attributes.image} />
         </div>
@@ -51,7 +51,7 @@ const Card = ({ article }) => {
             Continue Reading
           </span>
         </div> */}
-      </div>
+      </a>
     </Link>
   )
 }
