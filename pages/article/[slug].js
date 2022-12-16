@@ -34,8 +34,8 @@ const Article = ({ article, categories }) => {
           <p className="uk-margin-remove-bottom text-slate">
             By {article.attributes.author.data.attributes.name}
           </p>
-          <p className="text-slate-100">
-            <Moment format="MMM Do YYYY">
+          <p className="">
+            <Moment format="Do MMM YYYY">
               {article.attributes.published_at}
             </Moment>
           </p>
