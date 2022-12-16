@@ -4,14 +4,47 @@ import Moment from "react-moment"
 import NextImage from "./image"
 
 const Card = ({ article }) => {
+  const setColor = (id) => {
+    if (id === 1) {
+      return "text-pink-600"
+    }
+    if (id === 2) {
+      return "text-red-600"
+    }
+    if (id === 3) {
+      return "text-indigo-600"
+    }
+    if (id === 4) {
+      return "text-purple-600"
+    }
+    if (id === 5) {
+      return "text-blue-600"
+    }
+    if (id === 6) {
+      return "text-indigo-600"
+    }
+    if (id === 7) {
+      return "text-cyan-600"
+    }
+    if (id === 8) {
+      return "text-rose-600"
+    }
+  }
+
   return (
     <Link href={`/article/${article.attributes.slug}`} legacyBehavior>
       <a className="w-auto bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
         <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
           <NextImage image={article.attributes.image} />
         </div>
-        <div className="px-6 mb-2 text-xs">
-          <p className="">{article.attributes.category.data.attributes.name}</p>
+        <div
+          className={`px-6 mb-2 text-xs ${setColor(
+            article.attributes.category.data.id
+          )}`}
+        >
+          <p className={`${setColor(article.attributes.category.data.id)}`}>
+            {article.attributes.category.data.attributes.name}
+          </p>
         </div>
 
         <h2 className="px-6 transition duration-700 mb-8 cursor-pointer hover:text-blue-400 text-2xl font-normal">
@@ -21,20 +54,6 @@ const Card = ({ article }) => {
         {/* {console.log(article.attributes.title)} */}
 
         <div className="px-6 text-xs text-gray-700 mb-3.5">
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 inline text-xs mr-2 text-blue-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
-          </svg> */}
           <span className="align-middle">
             <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
