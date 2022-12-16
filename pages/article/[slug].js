@@ -21,22 +21,17 @@ const Article = ({ article, categories }) => {
     <Layout categories={categories.data}>
       <Seo seo={seo} />
       <div className="max-w-screen-lg mx-auto px-10 mb-8">
-        <div
-          className="text-center px-10 "
-          data-src={imageUrl}
-          data-srcset={imageUrl}
-          data-uk-img
-        >
+        <div className="text-center px-10">
           <h1>{article.attributes.title}</h1>
         </div>
 
         <div className="my-10">
-          <p className="uk-margin-remove-bottom text-slate">
+          <p className="text-slate">
             By {article.attributes.author.data.attributes.name}
           </p>
           <p className="">
-            <Moment format="Do MMM YYYY">
-              {article.attributes.published_at}
+            <Moment format="DD/MM/YYYY">
+              {article.attributes.publishedAt}
             </Moment>
           </p>
         </div>
