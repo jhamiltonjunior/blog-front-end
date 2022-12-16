@@ -36,7 +36,7 @@ const Card = ({ article }) => {
             />
           </svg> */}
           <span className="align-middle">
-            <Moment format="MMMM, YYYY">
+            <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
             </Moment>
           </span>

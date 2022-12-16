@@ -30,7 +30,7 @@ const Article = ({ article, categories }) => {
             By {article.attributes.author.data.attributes.name}
           </p>
           <p className="">
-            <Moment format="DD/MM/YYYY">
+            <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
             </Moment>
           </p>
