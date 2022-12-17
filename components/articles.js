@@ -10,7 +10,7 @@ const Articles = ({ articles }) => {
           return <Card article={article} key={article.attributes.slug} />
         })}
       </div>
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   )
 }
