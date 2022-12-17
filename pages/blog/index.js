@@ -1,13 +1,12 @@
 import React from "react"
 import Seo from "../../components/seo"
 import { fetchAPI } from "../../lib/api"
-import { useRouter } from "next/router"
 import Layout from "../../components/layout"
 import Card from "../../components/card"
 import Articles from "../../components/articles"
+import Pagination from "../../components/pagination"
 
 function Blog({ articles, page, categories, homepage }) {
-  const router = useRouter()
   console.log(articles.length)
 
   const lastPage = articles.length
@@ -17,20 +16,7 @@ function Blog({ articles, page, categories, homepage }) {
       <Seo seo={homepage.attributes.seo} />
       <Articles articles={articles} />
 
-      <div mt={40} pl={20} justifyContent="space-between" maxWidth={300}>
-        <button
-          onClick={() => router.push(`/blog?page=${page - 1}`)}
-          disabled={page <= 1}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => router.push(`/blog?page=${page + 1}`)}
-          disabled={page >= lastPage}
-        >
-          Next
-        </button>
-      </div>
+      <Pagination page={page} articles={articles} />
     </Layout>
   )
 }

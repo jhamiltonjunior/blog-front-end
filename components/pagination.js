@@ -1,14 +1,19 @@
 import React from "react"
+import { useRouter } from "next/router"
 
-const Pagination = () => {
+const Pagination = ({ page, articles }) => {
+  const router = useRouter()
+  const lastPage = articles.length
+
   return (
     <div className="flex items-center justify-center">
       <nav
         className="my-10 isolate inline-flex -space-x-px rounded-md shadow-sm"
         aria-label="Pagination"
       >
-        <a
-          href="#"
+        <button
+          onClick={() => router.push(`/?page=${page - 1}`)}
+          disabled={page <= 1}
           className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
         >
           <span className="sr-only">Previous</span>
@@ -25,50 +30,12 @@ const Pagination = () => {
               clipRule="evenodd"
             />
           </svg>
-        </a>
-        <a
-          href="#"
-          aria-current="page"
-          className="relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20"
-        >
-          1
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        >
-          2
-        </a>
-        <a
-          href="#"
-          className="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex"
-        >
-          3
-        </a>
-        <span className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-          ...
-        </span>
-        <a
-          href="#"
-          className="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex"
-        >
-          8
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        >
-          9
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        >
-          10
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+        </button>
+
+        <button
+          onClick={() => router.push(`/?page=${page + 1}`)}
+          disabled={page >= lastPage}
+          className="relative inline-flex items-center rounded-r-md border border-gray-300 text-gray-500 bg-white px-2 py-2 text-sm font-medium  hover:bg-gray-50 focus:z-20"
         >
           <span className="sr-only">Next</span>
           <svg
@@ -84,7 +51,7 @@ const Pagination = () => {
               clipRule="evenodd"
             />
           </svg>
-        </a>
+        </button>
       </nav>
     </div>
   )
