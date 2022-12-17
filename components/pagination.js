@@ -16,20 +16,20 @@ const Pagination = ({ page, articles }) => {
           disabled={page <= 1}
           className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
         >
-          <span className="sr-only">Previous</span>
           <svg
-            className="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
             aria-hidden="true"
+            className="w-5 h-5 mr-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               fillRule="evenodd"
-              d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+              d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
               clipRule="evenodd"
-            />
+            ></path>
           </svg>
+          <span>Prev</span>
         </button>
 
         <button
@@ -37,19 +37,19 @@ const Pagination = ({ page, articles }) => {
           disabled={page >= lastPage}
           className="relative inline-flex items-center rounded-r-md border border-gray-300 text-gray-500 bg-white px-2 py-2 text-sm font-medium  hover:bg-gray-50 focus:z-20"
         >
-          <span className="sr-only">Next</span>
+          <span>Next</span>
           <svg
-            className="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
             aria-hidden="true"
+            className="w-5 h-5 ml-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               fillRule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
               clipRule="evenodd"
-            />
+            ></path>
           </svg>
         </button>
       </nav>
