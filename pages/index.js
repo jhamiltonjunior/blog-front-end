@@ -8,25 +8,38 @@ import { fetchAPI } from "../lib/api"
 import Header from "../components/header"
 import Pagination from "../components/pagination"
 
-const Home = ({ articles, categories, homepage, page }) => {
+const Home = ({ articles, categories, homepage, page, articlesLength }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.attributes.seo} />
       {/* className="grid grid-cols-1 lg:grid-cols-12 gap-12" */}
       {/* <h1>{homepage.attributes.hero.title}</h1> */}
       <Articles articles={articles} />
-      <Pagination page={page} articles={articles} />
+      <Pagination
+        page={page}
+        articles={articles}
+        articlesLength={articlesLength}
+      />
     </Layout>
   )
 }
 
 export async function getServerSideProps({ query: { page = 1 } }) {
-  const start = +page === 1 ? 0 : (+page - 1) * 3
+  let articlesLength = await fetchAPI("/articles", { populate: "*" })
+
+  let maxArticlePerPage = 6
+
+  articlesLength = Math.round(articlesLength.data.length / maxArticlePerPage)
+
+  const start = +page === 1 ? 0 : +page + maxArticlePerPage
+  // console.log(+page)
+  // console.log(page)
+  console.log(start)
 
   const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
     fetchAPI("/articles", {
       populate: "*",
-      pagination: { limit: 3, start },
+      pagination: { limit: maxArticlePerPage, start },
     }),
     fetchAPI("/categories", { populate: "*" }),
     fetchAPI("/homepage", {
@@ -43,6 +56,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
       categories: categoriesRes.data,
       homepage: homepageRes.data,
       page: +page,
+      articlesLength,
       revalidate: 1,
     },
   }

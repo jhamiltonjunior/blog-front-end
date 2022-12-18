@@ -1,9 +1,9 @@
 import React from "react"
 import { useRouter } from "next/router"
 
-const Pagination = ({ page, articles }) => {
+const Pagination = ({ page, articles, articlesLength }) => {
   const router = useRouter()
-  const lastPage = articles.length
+  const lastPage = Math.ceil(articles.length / 2)
 
   return (
     <div className="flex items-center justify-center">
@@ -15,7 +15,7 @@ const Pagination = ({ page, articles }) => {
           onClick={() => router.push(`/?page=${page - 1}`)}
           disabled={page <= 1}
           className={`relative rounded-full inline-flex items-center rounded-l-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black-500 hover:bg-gray-50 focus:z-20 ${
-            page <= 1 ? "hidden" : ""
+            page <= 1 ? "opacity-0" : ""
           }`}
         >
           <svg
@@ -35,9 +35,9 @@ const Pagination = ({ page, articles }) => {
         <span>Página 1 de 3</span>
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
-          disabled={page >= lastPage}
+          disabled={page >= articlesLength}
           className={`relative rounded-full inline-flex items-center border border-gray-300 text-black-500 bg-white px-3 py-3 text-sm font-medium  hover:bg-gray-50 focus:z-20 ${
-            page >= lastPage ? "hidden" : ""
+            page >= articlesLength ? "opacity-0" : ""
           }`}
         >
           <svg
