@@ -32,7 +32,7 @@ const Pagination = ({ page, articles, articlesLength }) => {
             ></path>
           </svg>
         </button>
-        <span>Página 1 de 3</span>
+        <span>Página {`${page} de ${articlesLength}`}</span>
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
           disabled={page >= articlesLength}

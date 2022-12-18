@@ -27,13 +27,11 @@ const Home = ({ articles, categories, homepage, page, articlesLength }) => {
 export async function getServerSideProps({ query: { page = 1 } }) {
   let articlesLength = await fetchAPI("/articles", { populate: "*" })
 
-  let maxArticlePerPage = 6
+  const maxArticlePerPage = 2
 
-  articlesLength = Math.round(articlesLength.data.length / maxArticlePerPage)
+  articlesLength = Math.round(articlesLength.data.length / maxArticlePerPage) //ok
 
-  const start = +page === 1 ? 0 : +page + maxArticlePerPage
-  // console.log(+page)
-  // console.log(page)
+  const start = +page === 1 ? 0 : +maxArticlePerPage
   console.log(start)
 
   const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
