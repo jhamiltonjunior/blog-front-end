@@ -6,7 +6,7 @@ export default async function sitemap(req, res) {
     {
       url: "article/what-s-inside-a-black-hole",
       changeFreq: "daily",
-      priority: 0.3
+      priority: 0.3,
     },
     {
       url: "article/the-internet-s-own-boy",
