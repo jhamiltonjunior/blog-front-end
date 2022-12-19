@@ -13,6 +13,7 @@ const Pagination = ({ page, articles, articlesLength }) => {
       >
         <button
           onClick={() => router.push(`/?page=${page - 1}`)}
+          aria-label="Retornar"
           disabled={page <= 1}
           className={`relative rounded-full inline-flex items-center rounded-l-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black-500 hover:bg-gray-50 focus:z-20 ${
             page <= 1 ? "opacity-0" : ""
@@ -35,6 +36,7 @@ const Pagination = ({ page, articles, articlesLength }) => {
         <span>Página {`${page} de ${articlesLength}`}</span>
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
+          aria-label="avançar"
           disabled={page >= articlesLength}
           className={`relative rounded-full inline-flex items-center border border-gray-300 text-black-500 bg-white px-3 py-3 text-sm font-medium  hover:bg-gray-50 focus:z-20 ${
             page >= articlesLength ? "opacity-0" : ""
