@@ -5,6 +5,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* pinterest verification */}
+          <meta
+            name="p:domain_verify"
+            content="101e0b73f937264111d2ad8d29c014e5"
+          />
           {/* eslint-disable-next-line */}
           <link
             rel="stylesheet"
