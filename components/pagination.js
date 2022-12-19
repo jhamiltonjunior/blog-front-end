@@ -38,6 +38,7 @@ const Pagination = ({ page, articles, articlesLength }) => {
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
           aria-label="Avançar"
+          aria-disabled={page >= articlesLength ? true : false}
           disabled={page >= articlesLength}
           className={`relative rounded-full inline-flex items-center border border-gray-300 text-black-500 bg-white px-3 py-3 text-sm font-medium  hover:bg-gray-50 focus:z-20 ${
             page >= articlesLength ? "opacity-0" : ""
