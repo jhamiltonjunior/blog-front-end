@@ -8,24 +8,24 @@ export default async function sitemap(req, res) {
       changeFreq: "daily",
       priority: 0.3,
     },
-    {
-      url: "article/the-internet-s-own-boy",
-      changeFreq: "daily",
-      priority: 0.3,
-    },
-    {
-      url: "article/this-shrimp-is-awesome",
-      changeFreq: "daily",
-      priority: 0.3,
-    },
-    {
-      url: "article/a-bug-is-becoming-a-meme-on-the-internet",
-      changeFreq: "daily",
-      priority: 0.3,
-    },
-    { url: "article/we-love-pizza", changeFreq: "daily", priority: 0.3 },
-    { url: "article/beautiful-picture", changeFreq: "daily", priority: 0.3 },
-    { url: "article/i-testing", changeFreq: "daily", priority: 0.3 },
+    // {
+    //   url: "article/the-internet-s-own-boy",
+    //   changeFreq: "daily",
+    //   priority: 0.3,
+    // },
+    // {
+    //   url: "article/this-shrimp-is-awesome",
+    //   changeFreq: "daily",
+    //   priority: 0.3,
+    // },
+    // {
+    //   url: "article/a-bug-is-becoming-a-meme-on-the-internet",
+    //   changeFreq: "daily",
+    //   priority: 0.3,
+    // },
+    // { url: "article/we-love-pizza", changeFreq: "daily", priority: 0.3 },
+    // { url: "article/beautiful-picture", changeFreq: "daily", priority: 0.3 },
+    // { url: "article/i-testing", changeFreq: "daily", priority: 0.3 },
   ]
 
   const stream = new SitemapStream({ hostname: `https://${req.headers.host}` })
