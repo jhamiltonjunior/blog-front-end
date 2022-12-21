@@ -45,6 +45,7 @@ class MyDocument extends Document {
             {document.documentElement.classList.add("dark")} else{" "}
             {document.documentElement.classList.remove("dark")}`}
           </Script>
+          <script async src="../assets/main.js"></script>
         </Head>
         <body>
           <Main />
