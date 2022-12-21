@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-screen-2xl w-full md:flex md:items-center md:justify-between dark:bg-gray-800">
         <span className="text-base text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
-          <Link href="/" className="hover:underline">
+          <Link href="/" className="hover:underline hover:text-[#695AA6]">
             Hamilton™
           </Link>
           . All Rights Reserved.
@@ -17,7 +17,7 @@ const Footer = () => {
             <a
               target={"_blank"}
               href="https://hamiltonjr.dev/#about"
-              className="mr-4 hover:underline md:mr-6 "
+              className="mr-4 hover:underline md:mr-6 hover:text-[#695AA6]"
               rel="noreferrer"
             >
               About
@@ -37,7 +37,7 @@ const Footer = () => {
             <a
               target={"_blank"}
               href="https://hamiltonjr.dev/#contact"
-              className="hover:underline"
+              className="hover:underline hover:text-[#695AA6]"
               rel="noreferrer"
             >
               Contact
