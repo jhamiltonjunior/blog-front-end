@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const Header = ({ categories }) => {
   return (
-    <header className="sticky top-0 z-50 flex h-[var(--header-height)] items-center bg-surface-1/50 px-2 text-lg backdrop-blur-md transition-transform ease-in-out md:px-0">
+    <header className="sticky top-0 z-50 flex h-[var(--header-height)] items-center bg-white/50 bg-surface-1/50 px-2 text-lg backdrop-blur-md transition-transform ease-in-out md:px-0">
       <nav className="2xl:container flex flex-wrap justify-between items-center mx-auto">
         <div className="block">
           <ul>
