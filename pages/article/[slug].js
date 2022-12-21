@@ -20,7 +20,7 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
-      <article className="max-w-screen-custom mx-auto px-10 mb-8 mt-10">
+      <div className="max-w-screen-custom mx-auto px-10 mb-8 mt-10">
         <div className="">
           <h1 className="">{article.attributes.title}</h1>
         </div>
@@ -39,10 +39,12 @@ const Article = ({ article, categories }) => {
         <div className="text-center mb-8 text-3xl">
           <NextImage image={article.attributes.image} className="rounded-lg" />
         </div>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-xl">
-          {article.attributes.content}
-        </ReactMarkdown>
-      </article>
+        <article>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            {article.attributes.content}
+          </ReactMarkdown>
+        </article>
+      </div>
     </Layout>
   )
 }
