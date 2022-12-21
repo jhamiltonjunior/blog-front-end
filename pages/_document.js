@@ -38,22 +38,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"
-          />
-          <script
-            async
-            src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"
-          />
-          <script
-            async
-            src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"
-          />
-          <script
-            async
-            src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js"
-          /> */}
+          <Script>
+            {`if (localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)){" "}
+            {document.documentElement.classList.add("dark")} else{" "}
+            {document.documentElement.classList.remove("dark")}`}
+          </Script>
         </Head>
         <body>
           <Main />
