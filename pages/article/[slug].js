@@ -25,11 +25,15 @@ const Article = ({ article, categories }) => {
           <h1>{article.attributes.title}</h1>
         </div>
 
-        <div className="my-10">
-          <p className="text-slate">
-            By {article.attributes.author.data.attributes.name}
+        <div className="my-10 flex justify-center">
+          <p>
+            By{" "}
+            <span className="text-[#695AA6] text-bold">
+              {article.attributes.author.data.attributes.name}
+            </span>
           </p>
-          <p className="">
+          <span className="text-gray-400 mx-2">•</span>
+          <p className="text-[#695AA6] text-bold">
             <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
             </Moment>
