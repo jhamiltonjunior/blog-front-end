@@ -96,6 +96,22 @@ article h2 {
 
 }
 
+article h3 {
+	font-size: 1.6rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+article ul {
+	margin-bottom: 2rem;
+}
+
+article li {
+	font-size: 1.1rem;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
 article p {
 	color: #4a4a4a;
 	font-weight: 500;
