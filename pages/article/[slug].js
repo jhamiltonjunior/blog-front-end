@@ -26,11 +26,11 @@ const Article = ({ article, categories }) => {
         </div>
 
         <div className="my-10 flex justify-center">
-          <p className="text-[#695AA6] text-bold">
+          <p className="text-blue-700 text-bold">
             {article.attributes.author.data.attributes.name}
           </p>
           <span className="text-gray-400 mx-2">•</span>
-          <p className="text-[#695AA6] text-bold">
+          <p className="text-blue-700 text-bold">
             <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
             </Moment>
