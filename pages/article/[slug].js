@@ -20,7 +20,7 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
-      <div className="max-w-screen-custom mx-auto px-10 mb-8 mt-10">
+      <div className="max-w-screen-custom mx-auto md:px-10 mb-8 mt-10">
         <div className="">
           <h1 className="">{article.attributes.title}</h1>
         </div>
