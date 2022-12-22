@@ -4,7 +4,12 @@ const { Readable } = require("stream")
 export default async function sitemap(req, res) {
   const links = [
     {
-      url: "article/what-s-inside-a-black-hole",
+      url: "article/7-dicas-para-ir-de-iniciante-a-avancado-na-programacao",
+      changeFreq: "daily",
+      priority: 0.3,
+    },
+    {
+      url: "article/por-onde-e-como-comecar-nesse-mundo-imenso-que-e-a-programacao",
       changeFreq: "daily",
       priority: 0.3,
     },
