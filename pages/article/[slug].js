@@ -17,6 +17,14 @@ const Article = ({ article, categories }) => {
     article: true,
   }
 
+  function LinkRenderer(props) {
+    return (
+      <a href={props.href} target="_blank" rel="noreferrer">
+        {props.children}
+      </a>
+    )
+  }
+
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
@@ -40,7 +48,10 @@ const Article = ({ article, categories }) => {
           <NextImage image={article.attributes.image} className="rounded-lg" />
         </div>
         <article>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+          <ReactMarkdown
+            rehypePlugins={[rehypeRaw]}
+            components={{ a: LinkRenderer }}
+          >
             {article.attributes.content}
           </ReactMarkdown>
         </article>
