@@ -4,7 +4,7 @@ const { Readable } = require("stream")
 export default async function sitemap(req, res) {
   const links = [
     {
-      url: "article/7-dicas-para-ir-de-iniciante-a-avancado-na-programacao",
+      url: "article/6-dicas-para-ir-de-iniciante-a-avancado-na-programacao",
       changeFreq: "daily",
       priority: 0.3,
     },
