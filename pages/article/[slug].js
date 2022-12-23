@@ -19,7 +19,7 @@ const Article = ({ article, categories }) => {
 
   function LinkRenderer(props) {
     return (
-      <a href={props.href} target="_blank" rel="noreferrer">
+      <a href={props.href} title={props.title} target="_blank" rel="noreferrer">
         {props.children}
       </a>
     )

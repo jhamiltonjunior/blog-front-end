@@ -132,6 +132,10 @@ article a {
 	color: #1D4ED8;
 }
 
+article a:visited {
+	color: #695AA6;
+}
+
 article a:hover {
 	color: #b91c1c;
 }
