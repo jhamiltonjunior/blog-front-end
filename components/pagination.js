@@ -16,7 +16,7 @@ const Pagination = ({ page, articles, articlesLength }) => {
           aria-label="Retornar"
           aria-disabled={page <= 1 ? true : false}
           disabled={page <= 1}
-          className={`relative rounded-full inline-flex items-center border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black-500 hover:bg-gray-50 focus:z-20 ${
+          className={`dark:text-white dark:bg-[#111111] dark:border-[#111111] dark:shadow-lg relative rounded-full inline-flex items-center border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black-500 hover:bg-gray-50 focus:z-20 ${
             page <= 1 ? "opacity-0" : ""
           }`}
         >
@@ -34,13 +34,15 @@ const Pagination = ({ page, articles, articlesLength }) => {
             ></path>
           </svg>
         </button>
-        <span>Página {`${page} de ${articlesLength}`}</span>
+        <span className="dark:text-white">
+          Página {`${page} de ${articlesLength}`}
+        </span>
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
           aria-label="Avançar"
           aria-disabled={page >= articlesLength ? true : false}
           disabled={page >= articlesLength}
-          className={`relative rounded-full inline-flex items-center border border-gray-300 text-black-500 bg-white px-3 py-3 text-sm font-medium  hover:bg-gray-50 focus:z-20 ${
+          className={`relative rounded-full inline-flex items-center border border-gray-300 dark:text-white dark:shadow-lg text-black-500 dark:bg-[#111111] dark:border-[#111111] bg-white px-3 py-3 text-sm font-medium hover:bg-gray-50 focus:z-20 ${
             page >= articlesLength ? "opacity-0" : ""
           }`}
         >

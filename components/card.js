@@ -33,7 +33,7 @@ const Card = ({ article }) => {
 
   return (
     <Link href={`/article/${article.attributes.slug}`} legacyBehavior>
-      <a className="w-auto bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
+      <a className="w-auto dark:bg-[#111111] bg-white shadow-lg rounded-lg px-0 transition duration-500 ease transform hover:-translate-y-1 grid content-between">
         <div className="relative overflow-hidden text-center mb-6 rounded-t-lg w-full object-cover">
           <NextImage image={article.attributes.image} />
         </div>
@@ -47,14 +47,14 @@ const Card = ({ article }) => {
           </p>
         </div>
 
-        <h2 className="px-6 transition duration-700 mb-8 cursor-pointer hover:text-blue-400 text-2xl font-normal">
+        <h2 className="px-6 transition duration-700 mb-8 cursor-pointer hover:text-blue-400 text-2xl font-normal dark:text-white">
           {article.attributes.title}
         </h2>
 
         {/* {console.log(article.attributes.title)} */}
 
         <div className="px-6 text-xs text-gray-700 mb-3.5">
-          <span className="align-middle">
+          <span className="align-middle dark:text-white">
             <Moment format="MMMM D, YYYY">
               {article.attributes.publishedAt}
             </Moment>
