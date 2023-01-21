@@ -49,6 +49,8 @@ export async function getServerSideProps({ query: { page = 1 } }) {
     }),
   ])
 
+  articlesRes.data = articlesRes.data.reverse()
+
   return {
     props: {
       articles: articlesRes.data,
